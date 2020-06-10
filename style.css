@@ -1,0 +1,353 @@
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:after
+*:before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    max-height: 1024px;
+    min-height: 1024px;
+    background: url(img/background.png) no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.header__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 67px;
+    color: #FFF;
+    padding: 129px 0 8px 103px;
+}
+
+.header__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    color: #FFF;
+    padding-left: 105px;
+}
+
+.level__simple,
+.level__average,
+.level__difficult {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    padding-left: 49px;
+    margin-bottom: 22px;
+    outline: none;
+}
+
+.level {
+    position: relative;
+}
+
+.level__simple:hover,
+.level__average:hover,
+.level__difficult:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.level__difficult {
+    margin-bottom: 112px;
+}
+
+.level:visited::before,
+.level:hover::before,
+.level:active::before,
+.level_active:before {
+    background: url(img/rectangle.png) no-repeat;
+    background-size: cover;
+    border: none;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 0;
+    top: 15px;
+    position: absolute;
+}
+
+.start-button {
+    border: none;
+    padding: 29px 85px 28px 84px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: #FFF;
+    background: #D62B2E;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
+
+.start-button:hover {
+    opacity: .8;
+}
+
+.container {
+    width: 50%;
+    height: 100%;
+    padding-left: 103px;
+}
+
+.img-wrap {
+    width: 50%;
+    height: 100%;
+}
+
+.bottom-card {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+}
+
+.top-card {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+.card-click {
+    transform: rotateY(180deg);
+}
+
+.card-wrap {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    height: 341px;
+    width: 218px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card-wrap_hover:hover {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-15px);
+    transition: .6s ease;
+}
+
+.card-backside {
+    background: url(img/backcard.png) no-repeat;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.gameover-card {
+    background: url(img/gameover.png) no-repeat;
+    backface-visibility: hidden;
+    height: 341px;
+    width: 218px;
+    position:absolute;
+    transform: rotateY(180deg);
+}
+
+.bug-card {
+    background: url(img/bug.png) no-repeat;
+    backface-visibility: hidden;
+    height: 341px;
+    width: 218px;
+    position:absolute;
+    transform: rotateY(180deg);
+}
+
+.simple-field {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 341px;
+    width: 702px;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.average-field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 706px;
+    width: 702px;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.difficult-field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 706px;
+    width: 1186px;
+    margin: auto;
+    perspective: 1000px;
+}
+
+@media (max-width: 1320px) {
+
+    .card-wrap,
+    .card-backside,
+    .gameover-card,
+    .bug-card {
+        background-size: 175px 271px;
+        height: 269px;
+        width: 173px;
+    }
+
+    .simple-field {
+        height: 269px;
+        width: 567px;
+    }
+
+    .average-field {
+        height: 562px;
+        width: 567px;
+    }
+
+    .difficult-field {
+        height: 562px;
+        width: 961px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .img-wrap {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card-wrap,
+    .card-backside,
+    .gameover-card,
+    .bug-card {
+        background-size: 146px 232px;
+        height: 230px;
+        width: 145px;
+    }
+
+    .simple-field {
+        height: 230px;
+        width: 483px;
+    }
+
+    .average-field {
+        height: 484px;
+        width: 483px;
+    }
+
+    .difficult-field {
+        height: 484px;
+        width: 760px;
+    }
+}
+
+@media (max-width: 840px) {
+    .card-wrap,
+    .card-backside,
+    .gameover-card,
+    .bug-card {
+        background-size: 86px 142px;
+        height: 140px;
+        width: 85px;
+    }
+
+    .simple-field {
+        height: 164px;
+        width: 279px;
+    }
+
+    .average-field {
+        height: 304px;
+        width: 279px;
+    }
+
+    .difficult-field {
+        height: 304px;
+        width: 473px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-left: 30px;
+    }
+
+    .header__title {
+        padding-left: 30px;
+    }
+
+    .header__description {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 527px) {
+    .header__title {
+        font-size: 50px;
+    }
+
+    .card-wrap,
+    .card-backside,
+    .gameover-card,
+    .bug-card {
+        background-size: 64px 102px;
+        height: 100px;
+        width: 63px;
+    }
+
+    .simple-field {
+        height: 100px;
+        width: 210px;
+    }
+
+    .average-field {
+        height: 224px;
+        width: 209px;
+    }
+
+    .difficult-field {
+        height: 540px;
+        width: 138px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header__title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

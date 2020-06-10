@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Найди баг</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="background">
+      <nav class="menu" id="level-menu">
+        <header class="header">
+          <h1 class="header__title">Выберите уровень сложности:</h1>
+          <p class="header__description">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+        </header>
+        <div class="container">
+            <div class="difficulty-levels">
+                <label class="level level_active" for="simple" id="label-simple">
+                    <input class="level__simple" type="button" name="simple" value="Простой" id="simple">
+                </label>
+                <label class="level" for="average" id="label-average">
+                    <input class="level__average" type="button" name="average" value="Средний" id="average">
+                </label>
+                <label class="level" for="difficult" id="label-difficult">
+                    <input class="level__difficult" type="button" name="difficult" value="Сложный" id="difficult">
+                </label>
+            </div>
+            <input class="start-button" type="button" name="start" value="Начать игру" id="button">
+        </div>
+          <div class="img-wrap">
+              <img class="bottom-card" src="./img/card.png">
+              <img class="top-card" src="./img/card1.png">
+          </div>
+      </nav>
+  <script src="script.js"></script>
+</body>
+</html>
